@@ -267,6 +267,42 @@ body { padding-top: var(--cg-strip-h); }
 .cg-colophon-note { margin: 4px 0 0; color: #9a9aa8; }
 @media (max-width: 640px) { .cg-strip-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { .cg-skip { transition: none; } }
+
+/* ---- Mobile reading view (touch / small screens) ------------------------------------- */
+/* The immersive per-구 template is desktop-only. On touch devices and narrow screens the
+   .cg-read view is shown instead — it uses only safe, high-contrast CSS so text can never
+   go invisible on iOS Safari (no background-clip:text, backdrop-filter, 100vh, :hover-gated
+   reveals, or mix-blend-mode). Fully namespaced + generator-controlled. */
+.cg-read { display: none; }
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  /* Neutralise immersive templates that lock scrolling / lock the viewport on <body>. */
+  html, body { overflow-x: hidden !important; overflow-y: auto !important; height: auto !important;
+    min-height: 0 !important; position: static !important; touch-action: auto !important; background: #ffffff !important; }
+  .cg-immersive { display: none !important; }
+  .cg-read { display: block; }
+}
+.cg-read { max-width: 720px; margin: 0 auto; padding: 20px 18px 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #17171f; background: #ffffff; line-height: 1.75; -webkit-text-size-adjust: 100%; }
+.cg-read * { max-width: 100%; box-sizing: border-box; }
+.cg-read-head { padding: 8px 0 16px; border-bottom: 3px solid var(--cg-ra, #2d5bff); margin-bottom: 20px; }
+.cg-read-eyebrow { margin: 0 0 4px; color: var(--cg-rd, #333); font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+.cg-read-head h1 { margin: 0; font-size: clamp(30px, 8vw, 40px); line-height: 1.15; color: #14141c; font-weight: 800; }
+.cg-read h2 { font-size: 20px; margin: 30px 0 10px; padding-left: 11px; color: #14141c; font-weight: 700;
+  border-left: 5px solid var(--cg-ra, #2d5bff); }
+.cg-read p { margin: 0 0 12px; font-size: 17px; color: #23232d; }
+.cg-read section { margin: 0; }
+.cg-read ul { margin: 8px 0 0; padding-left: 20px; }
+.cg-read li { margin: 8px 0; font-size: 16px; color: #23232d; }
+.cg-read li strong { color: #111119; font-weight: 700; }
+.cg-read .facts, .cg-read .symbols { list-style: none; padding: 14px 16px; margin: 8px 0 0;
+  background: #f5f6fa; border: 1px solid #e6e8f0; border-radius: 12px; }
+.cg-read .faq details { border: 1px solid #e6e8f0; border-radius: 10px; padding: 10px 14px; margin: 8px 0; background: #fbfbfd; }
+.cg-read .faq summary { cursor: pointer; font-weight: 700; font-size: 16px; color: #14141c; }
+.cg-read .faq details p { margin: 8px 0 2px; color: #44454f; }
+.cg-read a { color: #1a46d8; word-break: break-word; }
+.cg-read .sources { font-size: 14px; color: #55565f; }
+.cg-read .sources a { color: #3a5bd0; }
 </style>
 </head>
 <body>
@@ -275,6 +311,7 @@ body { padding-top: var(--cg-strip-h); }
     <span class="cg-ad">AD</span><span class="cg-strip-label">후원 파트너</span><span class="cg-strip-list"><a class="cg-strip-item" href="https://ikoffices.com" rel="sponsored noopener" target="_blank">일광오피스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://mobidicsaju.com" rel="sponsored noopener" target="_blank">모비딕 사주</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://www.foodskorea.com/" rel="sponsored noopener" target="_blank">전국팔도 식품도감</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://myflowmakers.com" rel="sponsored noopener" target="_blank">마이플로우메이커스</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonlijispace.com" rel="sponsored noopener" target="_blank">연리지 인테리어</a><span class="cg-strip-dot" aria-hidden="true">·</span><a class="cg-strip-item" href="https://yeonliji.io" rel="sponsored noopener" target="_blank">주식회사 연리지</a><span class="cg-strip-dot" aria-hidden="true">·</span><span class="cg-strip-item cg-strip-text">세무·법률 자문</span></span>
   </aside>
   <div id="cg-main" tabindex="-1"></div>
+  <div class="cg-immersive">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
   @font-face{font-family:'Pretendard';font-weight:900;src:local('Pretendard Black'),local('Pretendard-Black');}
@@ -734,6 +771,130 @@ body { padding-top: var(--cg-strip-h); }
 
 })();
 </script>
+  </div>
+  <main class="cg-read" id="cg-read" role="main" lang="ko" style="--cg-ra:#2bab58;--cg-ra2:#39d0c4;--cg-rd:#19572f">
+    <header class="cg-read-head">
+      <p class="cg-read-eyebrow">서울특별시</p>
+      <h1>강남구</h1>
+    </header>
+    <div class="cg-read-body">
+      <section id="r-intro">
+        <h2>지역 소개</h2>
+        <p>강남구는 대한민국을 대표하는 상업·업무·교육의 중심지로, 테헤란로를 축으로 한 업무지구와 압구정·청담·신사동의 명품 상권이 세계적 인지도를 지닌 곳입니다. 1970년대 이후 이른바 &#x27;강남 개발&#x27;을 통해 논밭이던 한강 이남 땅이 계획적으로 조성되면서 대한민국 도시화의 상징이 되었습니다. 코엑스와 삼성동 국제업무지구, 대치동 학원가, 도산대로 갤러리 거리가 한 구 안에 공존하며 낮과 밤의 표정이 뚜렷이 다릅니다. 부동산 가격과 교육열이 전국에서 가장 높은 지역으로 자주 언급되어 &#x27;강남&#x27;이라는 이름 자체가 하나의 브랜드처럼 통용됩니다. 봉은사와 선릉·정릉 같은 조선의 유산이 초고층 빌딩 사이에 자리해 역사와 첨단이 겹쳐 보이는 독특한 경관을 만듭니다.</p>
+      </section>
+      <section id="r-facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 556,421명 (2025년 8월말)</li>
+          <li>면적: 39.5 km²</li>
+          <li>신설: 1975년 10월 1일</li>
+        </ul>
+      </section>
+      <section id="r-history">
+        <h2>역사</h2>
+        <p>강남구 일대는 조선시대까지 경기도 광주군에 속한 한적한 농촌 지역으로, 한강 나루를 통해 도성과 연결되던 변두리였습니다. 1963년 서울시 행정구역 확장 때 성동구로 편입되었고, 1975년 10월 1일 성동구에서 분리되어 강남구로 정식 설치되었는데 &#x27;한강 남쪽&#x27;이라는 지리적 위치가 그대로 구 이름이 되었습니다. 1970년대 정부의 강남 개발 정책과 영동토지구획정리사업으로 대규모 계획도시가 조성되면서 짧은 기간에 논밭이 격자형 시가지로 탈바꿈했습니다. 이후 인구와 시가지가 급팽창하자 1979년 강동구, 1988년 서초구가 강남구에서 잇따라 분리되어 오늘날의 경계가 확정되었습니다. 압구정이라는 지명은 세조 때 권신 한명회가 한강변에 세운 정자 &#x27;압구정&#x27;에서 유래했고, 삼성동·대치동 등은 옛 자연마을 이름을 그대로 이어받았습니다. 짧은 역사에도 불구하고 강남은 한국 현대 도시계획과 부동산 문화의 축약판으로 평가됩니다.</p>
+      </section>
+      <section id="r-geography">
+        <h2>지리·자연환경</h2>
+        <p>강남구는 서울 동남부에 자리하며 면적은 약 39.50km²로 서울 전체의 6.5% 남짓을 차지합니다. 북쪽은 한강을 경계로 용산구·성동구·광진구와 마주하고, 동쪽은 탄천을 사이에 두고 송파구와, 서쪽은 서초구와, 남쪽은 경기도 성남시와 접합니다. 한강·탄천·양재천이라는 세 물길이 구를 감싸거나 관통하며, 특히 양재천은 서초구에서 흘러와 탄천으로 합류하는 도심 속 생태하천으로 정비되어 있습니다. 남쪽 끝에는 해발 293m의 대모산과 그에 잇닿은 구룡산이 자연 녹지 축을 이루어 세곡동·자곡동 일대와 성남시 경계를 나눕니다. 전반적으로 한강변 저지대에서 남쪽 산지로 완만히 높아지는 지형이라 강변 평지에는 고밀 시가지가, 남부 구릉지에는 주거단지와 산림이 분포합니다.</p>
+      </section>
+      <section id="r-characteristics">
+        <h2>지역 특징</h2>
+        <p>강남구의 주민등록 인구는 2025년 8월말 기준 약 55만 6천 명으로 서울 자치구 가운데 상위권이며, 14개 법정동을 22개 행정동으로 나누어 관리합니다. 산업 구조는 테헤란로의 IT·금융·벤처 기업, 삼성동 코엑스와 무역센터를 거점으로 한 국제 비즈니스, 압구정·청담의 패션·뷰티·의료 서비스가 두터운 3차산업 중심입니다. 대치동 학원가로 대표되는 사교육 밀집도가 전국 최고 수준이어서 교육 특구로 불리며, 이 때문에 학군 수요가 부동산 가격을 끌어올리는 지역 특유의 순환 구조를 보입니다. 세대당 소득과 지방세 규모가 크고 재정자립도가 높아 대한민국 &#x27;부촌&#x27;의 대명사로 여겨집니다. 진취적이고 개방적인 소비·문화 성향이 강해 새로운 트렌드가 가장 먼저 실험되고 확산되는 무대 역할을 합니다.</p>
+      </section>
+      <section id="r-landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>코엑스(COEX)와 별마당도서관</strong> — 삼성동 무역센터 단지에 자리한 국내 최대급 컨벤션·전시 시설로, 코엑스몰 중앙의 개방형 공간 별마당도서관은 13m 높이 서가로 유명한 강남의 대표 랜드마크입니다.</li>
+          <li><strong>신사동 가로수길</strong> — 은행나무가 늘어선 신사동 거리로, 개성 있는 편집숍·카페·갤러리가 밀집해 패션과 트렌드를 선도하는 강남 북부의 명소입니다.</li>
+          <li><strong>압구정 로데오거리와 청담동 명품거리</strong> — 압구정 로데오와 청담동 도산대로 일대는 국내외 명품 브랜드 플래그십 매장과 하이엔드 패션·뷰티 숍이 모인 대한민국 럭셔리 상권의 중심입니다.</li>
+          <li><strong>테헤란로</strong> — 강남역에서 삼성역까지 이어지는 약 4km의 간선도로로, IT·금융·벤처 기업 본사와 초고층 오피스가 밀집해 &#x27;한국의 실리콘밸리&#x27;로 불립니다.</li>
+        </ul>
+      </section>
+      <section id="r-heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>선릉과 정릉(선정릉)</strong> — 조선 제9대 성종과 계비 정현왕후의 선릉, 제11대 중종의 정릉으로 이루어진 왕릉으로, 2009년 유네스코 세계유산 &#x27;조선왕릉&#x27;에 등재된 도심 속 사적입니다.</li>
+          <li><strong>봉은사</strong> — 신라 때 창건되었다고 전하는 삼성동의 유서 깊은 사찰로, 코엑스 맞은편 도심 한복판에서 전통 가람과 미륵대불을 만날 수 있는 불교 성지입니다.</li>
+          <li><strong>LG아트센터·플랫폼엘 등 공연·전시 공간</strong> — 마곡 이전 이전까지 강남을 대표하던 LG아트센터를 비롯해 청담·삼성동 일대의 갤러리와 복합문화공간이 밀집해 공연·전시가 활발한 문화 벨트를 이룹니다.</li>
+          <li><strong>K-POP 스퀘어와 SM타운 코엑스아티움</strong> — 코엑스 일대의 대형 미디어 파사드와 엔터테인먼트 복합관으로, 국내외 팬들이 찾는 한류·K-POP 문화의 상징적 거점입니다.</li>
+        </ul>
+      </section>
+      <section id="r-nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>양재천 산책로</strong> — 대치동과 개포동을 지나 탄천으로 합류하는 생태하천으로, 벚꽃길과 자전거·산책로가 잘 정비되어 주민들의 대표적인 도심 휴식 공간입니다.</li>
+          <li><strong>대모산·구룡산</strong> — 구 남부에 솟은 해발 293m 대모산과 이웃한 구룡산은 완만한 능선의 도시 근교 산으로, 강남권 시민이 즐겨 찾는 등산·삼림욕 코스입니다.</li>
+          <li><strong>도산공원</strong> — 신사동에 자리한 도산 안창호 선생을 기리는 공원으로, 청담·압구정 상권과 맞닿아 있어 도심 속 녹지 쉼터이자 산책 명소로 사랑받습니다.</li>
+          <li><strong>탄천 둔치</strong> — 송파구와의 경계를 이루는 탄천변에 조성된 둔치 공원으로, 강남과 잠실을 잇는 자전거길과 체육시설이 갖춰진 하천 휴식 공간입니다.</li>
+        </ul>
+      </section>
+      <section id="r-transport">
+        <h2>교통</h2>
+        <p>강남구는 서울 대중교통망이 가장 촘촘하게 겹치는 지역 중 하나로, 지하철 2호선·3호선·7호선·9호선과 수인분당선·신분당선이 구를 종횡으로 지납니다. 특히 강남역은 2호선과 신분당선이 만나는 서울 최대 승하차 인원의 환승 거점으로, 광역버스와 시내버스가 집중되는 교통 허브입니다. 삼성역 일대는 향후 GTX-A·C 노선과 위례신사선 등이 모이는 삼성역 복합환승센터 개발이 추진되어 광역 교통의 요지로 부상하고 있습니다. 도로 축으로는 동서를 잇는 테헤란로와 영동대로, 남북을 잇는 강남대로가 간선을 이루고, 한강을 건너는 성수대교·영동대교·청담대교가 강북과 연결합니다. 경부고속도로 서울 관문과 올림픽대로가 인접해 수도권 광역 이동과 지방 연결이 모두 편리합니다.</p>
+      </section>
+      <section id="r-symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 목련</li>
+          <li>구목(나무): 은행나무</li>
+          <li>구조(새): 까치</li>
+        </ul>
+      </section>
+      <section id="r-faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>강남구라는 이름은 어떻게 붙여졌나요?</summary>
+            <p>한강의 남쪽에 위치한다는 지리적 특징에서 유래했으며, 1975년 성동구에서 분리 설치될 때 &#x27;강남구&#x27;라는 이름이 정해졌습니다.</p>
+          </details>
+          <details>
+            <summary>강남구는 언제 지금의 자치구가 되었나요?</summary>
+            <p>1975년 10월 1일 성동구에서 분리되어 설치되었고, 이후 1979년 강동구와 1988년 서초구가 분리되면서 현재의 경계가 확정되었습니다.</p>
+          </details>
+          <details>
+            <summary>강남구를 대표하는 관광·명소는 어디인가요?</summary>
+            <p>삼성동 코엑스와 별마당도서관, 신사동 가로수길, 압구정·청담 명품거리, 유네스코 세계유산 선릉과 정릉, 봉은사 등이 대표적입니다.</p>
+          </details>
+          <details>
+            <summary>강남구는 왜 교육 특구로 불리나요?</summary>
+            <p>대치동을 중심으로 전국 최고 수준의 학원가가 형성되어 있어 사교육 밀집도가 매우 높고, 이에 따른 학군 수요가 강한 지역이기 때문입니다.</p>
+          </details>
+          <details>
+            <summary>강남역에서 이용할 수 있는 지하철 노선은 무엇인가요?</summary>
+            <p>강남역에서는 지하철 2호선과 신분당선을 이용할 수 있으며, 서울에서 손꼽히는 승하차 인원과 환승 수요를 자랑하는 교통 거점입니다.</p>
+          </details>
+          <details>
+            <summary>강남구의 상징(구화·구목·구조)은 무엇인가요?</summary>
+            <p>구화는 목련, 구목은 은행나무, 구조는 까치로, 진취적이고 밝은 지역 이미지를 담고 있습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="r-links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.gangnam.go.kr/" rel="noopener">강남구청 공식 홈페이지</a></li>
+          <li><a href="https://www.gangnam.go.kr/contents/hello/3/view.do?mid=ID06_040401" rel="noopener">강남구 일반현황</a></li>
+        </ul>
+      </section>
+      <section id="r-github">
+        <h2>GitHub</h2>
+        <ul>
+          <li><a href="https://github.com/kr-seoul-gangnam" rel="noopener">GitHub 조직: kr-seoul-gangnam</a></li>
+          <li><a href="https://github.com/kr-seoul-gangnam/kr-seoul-gangnam.github.io" rel="noopener">이 사이트 저장소</a></li>
+        </ul>
+      </section>
+      <section id="r-sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EB%82%A8%EA%B5%AC" rel="noopener">강남구 - 위키백과, 우리 모두의 백과사전</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangnam.go.kr/contents/hello/3/view.do?mid=ID06_040401" rel="noopener">강남구청 &gt; 강남소개 &gt; 강남구소개 &gt; 일반현황</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.gangnam.go.kr/board/B_000644/list.do?mid=ID06_041001" rel="noopener">2025년도 8월말 기준 강남구 주민등록 인구통계 - 강남구청</a> (조회 2026-07-08)</li>
+          <li><a href="https://mediahub.seoul.go.kr/archives/1194858" rel="noopener">강남 도보여행코스 추천! &#x27;봉은사, 별마당도서관, 선정릉&#x27; - 서울시 정보소통광장</a> (조회 2026-07-08)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
   <aside class="cg-sponsors" aria-label="후원 파트너 상세">
     <p class="cg-spon-head"><span class="cg-ad">AD</span> 후원 파트너 <small>이 링크는 광고이며 편집상의 추천이 아닙니다 (rel=&quot;sponsored&quot;).</small></p>
     <ul class="cg-spon-grid">
