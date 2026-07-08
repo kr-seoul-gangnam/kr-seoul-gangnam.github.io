@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kr-seoul-gangnam.github.io/sitemap.xml
