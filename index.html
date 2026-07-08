@@ -117,35 +117,251 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "강남구의 주민등록 인구는 2025년 8월말 기준 약 55만 6천 명으로 서울 자치구 가운데 상위권이며, 14개 법정동을 22개 행정동으로 나누어 관리합니다. 산업 구조는 테헤란로의 IT·금융·벤처 기업, 삼성동 코엑스와 무역센터를 거점으로 한 국제 비즈니스, 압구정·청담의 패션·뷰티·의료 서비스가 두터운 3차산업 중심입니다. 대치동 학원가로 대표되는 사교육 밀집도가 전국 최고 수준이어서 교육 특구로 불리며, 이 때문에 학군 수요가 부동산 가격을 끌어올리는 지역 특유의 순환 구조를 보입니다. 세대당 소득과 지방세 규모가 크고 재정자립도가 높아 대한민국 '부촌'의 대명사로 여겨집니다. 진취적이고 개방적인 소비·문화 성향이 강해 새로운 트렌드가 가장 먼저 실험되고 확산되는 무대 역할을 합니다.",
+  "coords": {
+    "lat": 37.4959,
+    "lng": 127.0276
+  },
+  "cultural_heritage": [
+    {
+      "description": "조선 제9대 성종과 계비 정현왕후의 선릉, 제11대 중종의 정릉으로 이루어진 왕릉으로, 2009년 유네스코 세계유산 '조선왕릉'에 등재된 도심 속 사적입니다.",
+      "name": "선릉과 정릉(선정릉)"
+    },
+    {
+      "description": "신라 때 창건되었다고 전하는 삼성동의 유서 깊은 사찰로, 코엑스 맞은편 도심 한복판에서 전통 가람과 미륵대불을 만날 수 있는 불교 성지입니다.",
+      "name": "봉은사"
+    },
+    {
+      "description": "마곡 이전 이전까지 강남을 대표하던 LG아트센터를 비롯해 청담·삼성동 일대의 갤러리와 복합문화공간이 밀집해 공연·전시가 활발한 문화 벨트를 이룹니다.",
+      "name": "LG아트센터·플랫폼엘 등 공연·전시 공간"
+    },
+    {
+      "description": "코엑스 일대의 대형 미디어 파사드와 엔터테인먼트 복합관으로, 국내외 팬들이 찾는 한류·K-POP 문화의 상징적 거점입니다.",
+      "name": "K-POP 스퀘어와 SM타운 코엑스아티움"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "한강의 남쪽에 위치한다는 지리적 특징에서 유래했으며, 1975년 성동구에서 분리 설치될 때 '강남구'라는 이름이 정해졌습니다.",
+      "question": "강남구라는 이름은 어떻게 붙여졌나요?"
+    },
+    {
+      "answer": "1975년 10월 1일 성동구에서 분리되어 설치되었고, 이후 1979년 강동구와 1988년 서초구가 분리되면서 현재의 경계가 확정되었습니다.",
+      "question": "강남구는 언제 지금의 자치구가 되었나요?"
+    },
+    {
+      "answer": "삼성동 코엑스와 별마당도서관, 신사동 가로수길, 압구정·청담 명품거리, 유네스코 세계유산 선릉과 정릉, 봉은사 등이 대표적입니다.",
+      "question": "강남구를 대표하는 관광·명소는 어디인가요?"
+    },
+    {
+      "answer": "대치동을 중심으로 전국 최고 수준의 학원가가 형성되어 있어 사교육 밀집도가 매우 높고, 이에 따른 학군 수요가 강한 지역이기 때문입니다.",
+      "question": "강남구는 왜 교육 특구로 불리나요?"
+    },
+    {
+      "answer": "강남역에서는 지하철 2호선과 신분당선을 이용할 수 있으며, 서울에서 손꼽히는 승하차 인원과 환승 수요를 자랑하는 교통 거점입니다.",
+      "question": "강남역에서 이용할 수 있는 지하철 노선은 무엇인가요?"
+    },
+    {
+      "answer": "구화는 목련, 구목은 은행나무, 구조는 까치로, 진취적이고 밝은 지역 이미지를 담고 있습니다.",
+      "question": "강남구의 상징(구화·구목·구조)은 무엇인가요?"
+    }
+  ],
+  "geography_nature": "강남구는 서울 동남부에 자리하며 면적은 약 39.50km²로 서울 전체의 6.5% 남짓을 차지합니다. 북쪽은 한강을 경계로 용산구·성동구·광진구와 마주하고, 동쪽은 탄천을 사이에 두고 송파구와, 서쪽은 서초구와, 남쪽은 경기도 성남시와 접합니다. 한강·탄천·양재천이라는 세 물길이 구를 감싸거나 관통하며, 특히 양재천은 서초구에서 흘러와 탄천으로 합류하는 도심 속 생태하천으로 정비되어 있습니다. 남쪽 끝에는 해발 293m의 대모산과 그에 잇닿은 구룡산이 자연 녹지 축을 이루어 세곡동·자곡동 일대와 성남시 경계를 나눕니다. 전반적으로 한강변 저지대에서 남쪽 산지로 완만히 높아지는 지형이라 강변 평지에는 고밀 시가지가, 남부 구릉지에는 주거단지와 산림이 분포합니다.",
+  "history": "강남구 일대는 조선시대까지 경기도 광주군에 속한 한적한 농촌 지역으로, 한강 나루를 통해 도성과 연결되던 변두리였습니다. 1963년 서울시 행정구역 확장 때 성동구로 편입되었고, 1975년 10월 1일 성동구에서 분리되어 강남구로 정식 설치되었는데 '한강 남쪽'이라는 지리적 위치가 그대로 구 이름이 되었습니다. 1970년대 정부의 강남 개발 정책과 영동토지구획정리사업으로 대규모 계획도시가 조성되면서 짧은 기간에 논밭이 격자형 시가지로 탈바꿈했습니다. 이후 인구와 시가지가 급팽창하자 1979년 강동구, 1988년 서초구가 강남구에서 잇따라 분리되어 오늘날의 경계가 확정되었습니다. 압구정이라는 지명은 세조 때 권신 한명회가 한강변에 세운 정자 '압구정'에서 유래했고, 삼성동·대치동 등은 옛 자연마을 이름을 그대로 이어받았습니다. 짧은 역사에도 불구하고 강남은 한국 현대 도시계획과 부동산 문화의 축약판으로 평가됩니다.",
+  "intro": "강남구는 대한민국을 대표하는 상업·업무·교육의 중심지로, 테헤란로를 축으로 한 업무지구와 압구정·청담·신사동의 명품 상권이 세계적 인지도를 지닌 곳입니다. 1970년대 이후 이른바 '강남 개발'을 통해 논밭이던 한강 이남 땅이 계획적으로 조성되면서 대한민국 도시화의 상징이 되었습니다. 코엑스와 삼성동 국제업무지구, 대치동 학원가, 도산대로 갤러리 거리가 한 구 안에 공존하며 낮과 밤의 표정이 뚜렷이 다릅니다. 부동산 가격과 교육열이 전국에서 가장 높은 지역으로 자주 언급되어 '강남'이라는 이름 자체가 하나의 브랜드처럼 통용됩니다. 봉은사와 선릉·정릉 같은 조선의 유산이 초고층 빌딩 사이에 자리해 역사와 첨단이 겹쳐 보이는 독특한 경관을 만듭니다.",
+  "landmarks": [
+    {
+      "description": "삼성동 무역센터 단지에 자리한 국내 최대급 컨벤션·전시 시설로, 코엑스몰 중앙의 개방형 공간 별마당도서관은 13m 높이 서가로 유명한 강남의 대표 랜드마크입니다.",
+      "name": "코엑스(COEX)와 별마당도서관"
+    },
+    {
+      "description": "은행나무가 늘어선 신사동 거리로, 개성 있는 편집숍·카페·갤러리가 밀집해 패션과 트렌드를 선도하는 강남 북부의 명소입니다.",
+      "name": "신사동 가로수길"
+    },
+    {
+      "description": "압구정 로데오와 청담동 도산대로 일대는 국내외 명품 브랜드 플래그십 매장과 하이엔드 패션·뷰티 숍이 모인 대한민국 럭셔리 상권의 중심입니다.",
+      "name": "압구정 로데오거리와 청담동 명품거리"
+    },
+    {
+      "description": "강남역에서 삼성역까지 이어지는 약 4km의 간선도로로, IT·금융·벤처 기업 본사와 초고층 오피스가 밀집해 '한국의 실리콘밸리'로 불립니다.",
+      "name": "테헤란로"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "대치동과 개포동을 지나 탄천으로 합류하는 생태하천으로, 벚꽃길과 자전거·산책로가 잘 정비되어 주민들의 대표적인 도심 휴식 공간입니다.",
+      "name": "양재천 산책로"
+    },
+    {
+      "description": "구 남부에 솟은 해발 293m 대모산과 이웃한 구룡산은 완만한 능선의 도시 근교 산으로, 강남권 시민이 즐겨 찾는 등산·삼림욕 코스입니다.",
+      "name": "대모산·구룡산"
+    },
+    {
+      "description": "신사동에 자리한 도산 안창호 선생을 기리는 공원으로, 청담·압구정 상권과 맞닿아 있어 도심 속 녹지 쉼터이자 산책 명소로 사랑받습니다.",
+      "name": "도산공원"
+    },
+    {
+      "description": "송파구와의 경계를 이루는 탄천변에 조성된 둔치 공원으로, 강남과 잠실을 잇는 자전거길과 체육시설이 갖춰진 하천 휴식 공간입니다.",
+      "name": "탄천 둔치"
+    }
+  ],
+  "org_slug": "kr-seoul-gangnam",
+  "sido": "서울특별시",
+  "sigungu": "강남구",
+  "symbols": {
+    "bird": "까치",
+    "flower": "목련",
+    "tree": "은행나무"
+  },
+  "transport": "강남구는 서울 대중교통망이 가장 촘촘하게 겹치는 지역 중 하나로, 지하철 2호선·3호선·7호선·9호선과 수인분당선·신분당선이 구를 종횡으로 지납니다. 특히 강남역은 2호선과 신분당선이 만나는 서울 최대 승하차 인원의 환승 거점으로, 광역버스와 시내버스가 집중되는 교통 허브입니다. 삼성역 일대는 향후 GTX-A·C 노선과 위례신사선 등이 모이는 삼성역 복합환승센터 개발이 추진되어 광역 교통의 요지로 부상하고 있습니다. 도로 축으로는 동서를 잇는 테헤란로와 영동대로, 남북을 잇는 강남대로가 간선을 이루고, 한강을 건너는 성수대교·영동대교·청담대교가 강북과 연결합니다. 경부고속도로 서울 관문과 올림픽대로가 인접해 수도권 광역 이동과 지방 연결이 모두 편리합니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">서울특별시</p>
-      <h1>강남구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+  @font-face{font-family:'Pretendard';font-weight:900;src:local('Pretendard Black'),local('Pretendard-Black');}
+
+  #gn-root{--gn-ink:#0A0A0A;--gn-neon:#00FFCC;--gn-dim:#0e3a33;--gn-txt:#d8fff6;
+    background:var(--gn-ink);color:var(--gn-txt);
+    font-family:'Montserrat','Pretendard','Apple SD Gothic Neo',system-ui,sans-serif;
+    margin:0;padding:0;line-height:1.75;overflow-x:hidden;position:relative;}
+  #gn-root *{box-sizing:border-box;}
+  #gn-root h1,#gn-root h2,#gn-root h3{font-family:'Pretendard','Montserrat',sans-serif;font-weight:900;letter-spacing:-.01em;color:#fff;margin:0 0 .6em;}
+
+  /* ===== HERO / 3D STAGE ===== */
+  .gn-hero{position:relative;min-height:88vh;display:flex;flex-direction:column;
+    justify-content:center;align-items:center;text-align:center;
+    border-bottom:1px solid var(--gn-neon);overflow:hidden;padding:64px 20px;}
+  .gn-eyebrow{font-family:'Montserrat';font-weight:800;letter-spacing:.42em;
+    font-size:12px;color:var(--gn-neon);text-transform:uppercase;margin-bottom:22px;}
+  .gn-hero h1{font-size:clamp(38px,9vw,104px);line-height:.92;margin:0;color:#fff;}
+  .gn-hero h1 em{font-style:normal;color:var(--gn-neon);text-shadow:0 0 22px rgba(0,255,204,.55);}
+  .gn-sub{max-width:640px;margin:26px auto 0;font-size:15px;color:#8fbfb6;font-weight:400;}
+  .gn-scan{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:11px;
+    letter-spacing:.3em;color:var(--gn-neon);text-transform:uppercase;animation:gnpulse 2.4s ease-in-out infinite;}
+  @keyframes gnpulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+  /* 3D CANVAS */
+  #gn-stage{position:absolute;inset:0;perspective:1100px;perspective-origin:50% 42%;
+    cursor:grab;touch-action:none;}
+  #gn-stage.drag{cursor:grabbing;}
+  #gn-city{position:absolute;left:50%;top:60%;width:0;height:0;
+    transform-style:preserve-3d;transform:rotateX(64deg) rotateZ(0deg);will-change:transform;}
+  .gn-grid{position:absolute;left:-360px;top:-360px;width:720px;height:720px;
+    transform:translateZ(0);
+    background-image:linear-gradient(rgba(0,255,204,.10) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(0,255,204,.10) 1px,transparent 1px);
+    background-size:60px 60px;}
+  .gn-bld{position:absolute;transform-style:preserve-3d;cursor:pointer;}
+  .gn-face{position:absolute;background:linear-gradient(180deg,#0d1a17,#050807);
+    border:1px solid rgba(0,255,204,.32);}
+  .gn-bld .top{background:#082019;border:1px solid var(--gn-neon);}
+  .gn-bld:hover .gn-face{border-color:var(--gn-neon);background:linear-gradient(180deg,#0a2a24,#04120e);}
+  .gn-bld.active .gn-face{border-color:var(--gn-neon);box-shadow:inset 0 0 12px rgba(0,255,204,.4);}
+  .gn-dot{position:absolute;left:50%;transform:translateX(-50%);width:8px;height:8px;
+    background:var(--gn-neon);border-radius:50%;pointer-events:none;
+    box-shadow:0 0 10px var(--gn-neon);}
+  .gn-noglow{pointer-events:none;}
+
+  /* POPUP */
+  #gn-pop{position:absolute;z-index:20;min-width:200px;max-width:260px;
+    background:rgba(6,10,9,.94);border:1px solid var(--gn-neon);padding:14px 16px;
+    display:none;pointer-events:none;transition:opacity .12s;}
+  #gn-pop .k{font-family:'Montserrat';font-weight:800;letter-spacing:.24em;font-size:10px;
+    color:var(--gn-neon);text-transform:uppercase;}
+  #gn-pop .n{font-family:'Pretendard','Montserrat';font-weight:900;font-size:19px;color:#fff;margin:4px 0 6px;}
+  #gn-pop .d{font-size:12.5px;color:#9fd8cd;line-height:1.55;font-weight:400;}
+
+  /* ===== SECTIONS ===== */
+  .gn-wrap{max-width:1120px;margin:0 auto;padding:0 22px;}
+  .gn-band{padding:76px 0;border-bottom:1px solid rgba(0,255,204,.16);position:relative;}
+  .gn-tag{font-family:'Montserrat';font-weight:800;letter-spacing:.34em;font-size:11px;
+    color:var(--gn-neon);text-transform:uppercase;margin-bottom:16px;
+    padding-left:14px;border-left:2px solid var(--gn-neon);}
+
+  /* content injection zone */
+  #gn-content section{margin:0 0 8px;}
+  #gn-content h2{font-size:clamp(24px,4vw,38px);color:#fff;margin:0 0 20px;
+    padding-bottom:14px;border-bottom:1px solid rgba(0,255,204,.28);}
+  #gn-content p{font-size:15.5px;color:#c3ded7;font-weight:400;margin:0 0 16px;max-width:860px;}
+  #gn-content a{color:var(--gn-neon);text-decoration:none;border-bottom:1px solid rgba(0,255,204,.4);}
+  #gn-content a:hover{background:rgba(0,255,204,.12);}
+
+  /* the sections get card-shells via JS-agnostic CSS grouping */
+  #gn-content > section{background:linear-gradient(180deg,rgba(0,255,204,.03),transparent);
+    border:1px solid rgba(0,255,204,.14);padding:34px 30px;margin-bottom:26px;}
+  #gn-content > section:hover{border-color:rgba(0,255,204,.34);}
+
+  /* facts grid */
+  #gn-content .facts{list-style:none;padding:0;margin:8px 0 0;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;
+    background:rgba(0,255,204,.18);border:1px solid rgba(0,255,204,.18);}
+  #gn-content .facts li,#gn-content .facts>div{background:var(--gn-ink);padding:18px 20px;font-size:14px;color:#bfe4dc;}
+  #gn-content .facts strong,#gn-content .facts dt{color:var(--gn-neon);font-weight:800;display:block;
+    font-family:'Montserrat';letter-spacing:.06em;font-size:12px;text-transform:uppercase;margin-bottom:5px;}
+
+  /* symbols */
+  #gn-content .symbols{display:flex;flex-wrap:wrap;gap:14px;padding:0;margin:8px 0 0;list-style:none;}
+  #gn-content .symbols li,#gn-content .symbols>div{border:1px solid var(--gn-neon);
+    padding:12px 18px;font-size:13px;color:#d8fff6;background:rgba(0,255,204,.05);}
+
+  /* faq */
+  #gn-content .faq{margin-top:8px;}
+  #gn-content .faq details{border:1px solid rgba(0,255,204,.22);margin-bottom:10px;background:rgba(0,0,0,.35);}
+  #gn-content .faq summary{cursor:pointer;padding:16px 20px;font-weight:800;color:#fff;
+    font-family:'Montserrat';font-size:14.5px;list-style:none;position:relative;}
+  #gn-content .faq summary::-webkit-details-marker{display:none;}
+  #gn-content .faq summary::after{content:'+';position:absolute;right:20px;color:var(--gn-neon);font-size:20px;line-height:1;}
+  #gn-content .faq details[open] summary::after{content:'\2212';}
+  #gn-content .faq details[open] summary{border-bottom:1px solid rgba(0,255,204,.22);color:var(--gn-neon);}
+  #gn-content .faq details p,#gn-content .faq details>div{padding:14px 20px;font-size:14px;color:#b9ddd4;margin:0;}
+
+  /* landmark / list items inside sections */
+  #gn-content ul{padding-left:0;list-style:none;}
+  #gn-content li{margin:0 0 8px;padding-left:20px;position:relative;color:#c3ded7;font-size:14.5px;}
+  #gn-content li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;
+    background:var(--gn-neon);}
+
+  .gn-foot{padding:40px 22px 56px;text-align:center;color:#5f8a82;font-size:11px;letter-spacing:.2em;text-transform:uppercase;}
+  .gn-foot b{color:var(--gn-neon);}
+
+  @media(max-width:640px){
+    .gn-hero{min-height:78vh;}
+    #gn-content > section{padding:26px 20px;}
+    #gn-city{display:none;}
+    .gn-hero{background:radial-gradient(circle at 50% 30%,rgba(0,255,204,.08),transparent 60%);}
+  }
+  @media(prefers-reduced-motion:reduce){.gn-scan{animation:none;}}
+</style>
+
+<div id="gn-root">
+
+  <!-- 3D BUILDING-FOREST HERO (decorative enhancement over content) -->
+  <header class="gn-hero">
+    <div id="gn-stage" aria-hidden="true">
+      <div id="gn-city">
+        <div class="gn-grid"></div>
+      </div>
+    </div>
+    <div id="gn-pop" aria-hidden="true"><span class="k"></span><div class="n"></div><div class="d"></div></div>
+
+    <div style="position:relative;z-index:5;pointer-events:none">
+      <div class="gn-eyebrow">서울특별시 · Skyline Explorer</div>
+      <h1>강남구<br><em>3D</em> CITY</h1>
+      <p class="gn-sub">강남구 지역 정보 · 서울특별시 — 빌딩 숲을 드래그로 돌리고, 타워를 눌러 이 도시의 좌표를 읽으세요. 아래에는 강남구의 모든 기록이 정렬되어 있습니다.</p>
+    </div>
+    <div class="gn-scan">drag to rotate · click a tower · scroll for the archive ↓</div>
+  </header>
+
+  <!-- ============ CONTENT ARCHIVE (SEO-critical, always readable) ============ -->
+  <main class="gn-band">
+    <div class="gn-wrap">
+      <div class="gn-tag">kr-seoul-gangnam · Regional Archive</div>
+      <div id="gn-content">
+              <section id="intro">
         <h2>지역 소개</h2>
         <p>강남구는 대한민국을 대표하는 상업·업무·교육의 중심지로, 테헤란로를 축으로 한 업무지구와 압구정·청담·신사동의 명품 상권이 세계적 인지도를 지닌 곳입니다. 1970년대 이후 이른바 &#x27;강남 개발&#x27;을 통해 논밭이던 한강 이남 땅이 계획적으로 조성되면서 대한민국 도시화의 상징이 되었습니다. 코엑스와 삼성동 국제업무지구, 대치동 학원가, 도산대로 갤러리 거리가 한 구 안에 공존하며 낮과 밤의 표정이 뚜렷이 다릅니다. 부동산 가격과 교육열이 전국에서 가장 높은 지역으로 자주 언급되어 &#x27;강남&#x27;이라는 이름 자체가 하나의 브랜드처럼 통용됩니다. 봉은사와 선릉·정릉 같은 조선의 유산이 초고층 빌딩 사이에 자리해 역사와 첨단이 겹쳐 보이는 독특한 경관을 만듭니다.</p>
       </section>
@@ -253,10 +469,208 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
           <li><a href="https://mediahub.seoul.go.kr/archives/1194858" rel="noopener">강남 도보여행코스 추천! &#x27;봉은사, 별마당도서관, 선정릉&#x27; - 서울시 정보소통광장</a> (조회 2026-07-08)</li>
         </ul>
       </section>
+      </div>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 강남구 지역 정보 페이지입니다.</p>
-    </footer>
   </main>
+
+  <div class="gn-foot">
+    <b>강남구</b> · 서울특별시 &nbsp;//&nbsp; Built as a 3D skyline field · <b>Neon</b> #00FFCC on #0A0A0A
+  </div>
+</div>
+
+<script type="application/json" id="region-data-fallback">{"note":"generator injects #region-data separately"}</script>
+<script>
+(function(){
+  "use strict";
+  var root=document.getElementById('gn-root');
+  if(!root)return;
+
+  /* ---- read region JSON if the generator injected it ---- */
+  var data=null;
+  try{var el=document.getElementById('region-data');if(el)data=JSON.parse(el.textContent);}catch(e){data=null;}
+
+  var stage=document.getElementById('gn-stage');
+  var city=document.getElementById('gn-city');
+  var pop=document.getElementById('gn-pop');
+  if(!stage||!city)return;
+
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var small=window.matchMedia&&window.matchMedia('(max-width:640px)').matches;
+
+  /* ---- derive tower labels from region data (landmarks) with graceful defaults ---- */
+  function pick(arr,fallback){
+    if(Array.isArray(arr)&&arr.length){
+      return arr.map(function(x){
+        if(typeof x==='string')return{name:x,desc:''};
+        return{name:x.name||x.title||'명소',desc:x.desc||x.description||x.summary||''};
+      });
+    }
+    return fallback;
+  }
+  var defaults=[
+    {name:'중심 업무지구',desc:'강남구의 상징적인 고층 스카이라인.'},
+    {name:'문화 랜드마크',desc:'지역을 대표하는 문화 공간.'},
+    {name:'교통 허브',desc:'강남구로 향하는 관문.'},
+    {name:'생활 중심가',desc:'상업과 주거가 만나는 거리.'},
+    {name:'하천·녹지',desc:'도시 속 휴식의 축.'},
+    {name:'역사 유산',desc:'세대를 이어온 지역의 기억.'}
+  ];
+  var lm=pick(data&&data.landmarks,defaults);
+  /* enrich with heritage/nature names for extra variety */
+  var extra=pick(data&&data.cultural_heritage,[]).concat(pick(data&&data.nature_rest,[]));
+  var pool=lm.concat(extra).slice(0,14);
+  while(pool.length<9)pool=pool.concat(defaults);
+  pool=pool.slice(0, small?9:14);
+
+  var SIGUNGU="강남구";
+  pool.forEach(function(p){p.desc=(p.desc||'강남구을(를) 이루는 한 조각.').replace(/\{\{SIGUNGU\}\}/g,SIGUNGU);});
+
+  /* ---- build a small city of extruded blocks (CSS 3D) ---- */
+  var buildings=[];
+  function makeBox(w,d,h,x,y,label,desc,isLandmark){
+    var b=document.createElement('div');
+    b.className='gn-bld'+(isLandmark?' gn-landmark':'');
+    b.style.left=x+'px';b.style.top=y+'px';b.style.width=w+'px';b.style.height=d+'px';
+    b.style.transform='translateZ(0)';
+    var faces=[
+      {t:'translateZ('+h+'px)',w:w,h:d,cls:'top'},
+      {t:'rotateX(-90deg)',w:w,h:h,ori:'top left',pos:'top:'+d+'px'},
+      {t:'rotateX(-90deg) translateZ('+d+'px)',w:w,h:h,ori:'top left'},
+      {t:'rotateY(90deg)',w:d,h:h,ori:'top left',rot:'left'},
+      {t:'rotateY(90deg) translateZ(-'+w+'px)',w:d,h:h,ori:'top left'}
+    ];
+    /* front face (south) */
+    addFace(b,w,h,'rotateX(-90deg)','0% 0%',0,d);
+    /* back */
+    addFace(b,w,h,'rotateX(-90deg) translateY(-'+h+'px)','0% 0%',0,0,'translateZ('+d+'px)');
+    /* left */
+    addSide(b,d,h,'rotateY(-90deg)',0,0);
+    /* right */
+    addSide(b,d,h,'rotateY(-90deg)',w,0);
+    /* top */
+    var top=document.createElement('div');
+    top.className='gn-face top';top.style.width=w+'px';top.style.height=d+'px';
+    top.style.transform='translateZ('+h+'px)';b.appendChild(top);
+
+    b.dataset.name=label;b.dataset.desc=desc;
+    if(isLandmark){
+      var dot=document.createElement('div');dot.className='gn-dot';
+      dot.style.top='-14px';dot.style.transform='translateX(-50%) translateZ('+(h+14)+'px)';
+      b.appendChild(dot);
+    }
+    city.appendChild(b);
+    buildings.push(b);
+    return b;
+  }
+  function addFace(b,w,h,rot,ori,tx,ty,extra){
+    var f=document.createElement('div');f.className='gn-face';
+    f.style.width=w+'px';f.style.height=h+'px';f.style.transformOrigin='top left';
+    f.style.left=tx+'px';f.style.top=ty+'px';
+    f.style.transform=rot+(extra?' '+extra:'');
+    b.appendChild(f);
+  }
+  function addSide(b,d,h,rot,tx,ty){
+    var f=document.createElement('div');f.className='gn-face';
+    f.style.width=d+'px';f.style.height=h+'px';f.style.transformOrigin='top left';
+    f.style.left=tx+'px';f.style.top=ty+'px';
+    f.style.transform=rot;
+    b.appendChild(f);
+  }
+
+  /* deterministic pseudo-random so layout is stable */
+  var seed=42;function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+
+  /* place landmark towers on a loose grid, taller + tagged */
+  var placed=[];
+  function overlap(x,y,w,d){
+    for(var i=0;i<placed.length;i++){var p=placed[i];
+      if(x< p.x+p.w+18 && x+w+18>p.x && y<p.y+p.d+18 && y+d+18>p.y)return true;}
+    return false;
+  }
+  var count= small?9:16;
+  var lmIndex=0;
+  for(var i=0;i<count;i++){
+    var isLM = lmIndex<pool.length && (i%2===0 || i<pool.length);
+    var w= 34+Math.round(rnd()*26);
+    var d= 34+Math.round(rnd()*26);
+    var h= isLM ? 90+Math.round(rnd()*140) : 40+Math.round(rnd()*90);
+    var tries=0,x,y;
+    do{ x=-300+Math.round(rnd()*600); y=-300+Math.round(rnd()*600); tries++; }
+    while(overlap(x,y,w,d)&&tries<40);
+    placed.push({x:x,y:y,w:w,d:d});
+    var info= isLM ? pool[lmIndex++] : {name:'익명 타워 '+String(i+1).padStart(2,'0'),desc:'강남구 스카이라인을 채우는 필지.'.replace('강남구',SIGUNGU)};
+    makeBox(w,d,h,x,y,info.name,info.desc,isLM);
+  }
+
+  /* ---- drag to rotate ---- */
+  var rotZ=0, rotX=64, dragging=false, lx=0, ly=0, vX=0;
+  function apply(){city.style.transform='rotateX('+rotX+'deg) rotateZ('+rotZ+'deg)';}
+  apply();
+
+  function down(e){dragging=true;stage.classList.add('drag');
+    var p=point(e);lx=p.x;ly=p.y;hidePop();}
+  function move(e){
+    if(!dragging)return;
+    var p=point(e);var dx=p.x-lx,dy=p.y-ly;lx=p.x;ly=p.y;
+    rotZ+=dx*0.35; vX=dx*0.35;
+    rotX+=dy*0.18; if(rotX<28)rotX=28; if(rotX>80)rotX=80;
+    apply();
+    if(e.cancelable)e.preventDefault();
+  }
+  function up(){dragging=false;stage.classList.remove('drag');}
+  function point(e){var t=e.touches?e.touches[0]:e;return{x:t.clientX,y:t.clientY};}
+
+  stage.addEventListener('mousedown',down);
+  window.addEventListener('mousemove',move);
+  window.addEventListener('mouseup',up);
+  stage.addEventListener('touchstart',down,{passive:true});
+  stage.addEventListener('touchmove',move,{passive:false});
+  stage.addEventListener('touchend',up);
+
+  /* gentle idle auto-rotate + inertia (respect reduced-motion) */
+  var last=0;
+  function loop(ts){
+    if(!reduce){
+      if(!dragging){
+        if(Math.abs(vX)>0.05){rotZ+=vX;vX*=0.94;}
+        else{rotZ+=0.06;}
+        apply();
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  if(!reduce)requestAnimationFrame(loop);
+
+  /* ---- click a tower -> popup ---- */
+  var moved=false, dsx=0, dsy=0, activeEl=null;
+  stage.addEventListener('mousedown',function(e){var p=point(e);dsx=p.x;dsy=p.y;moved=false;});
+  stage.addEventListener('mousemove',function(e){var p=point(e);if(Math.abs(p.x-dsx)>5||Math.abs(p.y-dsy)>5)moved=true;});
+
+  buildings.forEach(function(b){
+    b.addEventListener('click',function(e){
+      if(moved)return;
+      showPop(b,e);
+    });
+  });
+  function showPop(b,e){
+    if(activeEl)activeEl.classList.remove('active');
+    b.classList.add('active');activeEl=b;
+    pop.querySelector('.k').textContent= b.classList.contains('gn-landmark')?'Landmark ▸ '+SIGUNGU:'Sector ▸ '+SIGUNGU;
+    pop.querySelector('.n').textContent=b.dataset.name;
+    pop.querySelector('.d').textContent=b.dataset.desc;
+    pop.style.display='block';
+    var rect=stage.getBoundingClientRect();
+    var px=(e.clientX-rect.left), py=(e.clientY-rect.top);
+    px=Math.min(px, rect.width-270); px=Math.max(px,10);
+    py=Math.min(py, rect.height-120); py=Math.max(py,10);
+    pop.style.left=px+'px';pop.style.top=py+'px';
+    clearTimeout(pop._t);
+    pop._t=setTimeout(hidePop,4200);
+  }
+  function hidePop(){pop.style.display='none';if(activeEl){activeEl.classList.remove('active');activeEl=null;}}
+  stage.addEventListener('click',function(e){if(e.target===stage||e.target===city||e.target.classList.contains('gn-grid'))hidePop();});
+
+})();
+</script>
 </body>
 </html>
